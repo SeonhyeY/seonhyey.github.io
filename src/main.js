@@ -12,8 +12,20 @@ document.addEventListener('scroll', () => {
 
 // Make home gradually trasparent when the page scrolls down
 const home = document.querySelector('.home__container');
-const homeHeight = home.getBoundingClientRect().height;
+const homeHeight = home.offsetHeight;
 
 document.addEventListener('scroll', () => {
   home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Show up arrow-up button when the page scrolls down
+// Make disappear arrow button when the page is at the top
+const scrollTop = document.querySelector('.arrow-up');
+
+document.addEventListener('scroll', () => {
+  if (window.scrollY < homeHeight / 2) {
+    scrollTop.classList.add('hide');
+  } else {
+    scrollTop.classList.remove('hide');
+  }
 });
