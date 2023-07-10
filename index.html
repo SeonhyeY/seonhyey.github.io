@@ -31,7 +31,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
     <!-- JavaScript -->
-    <script src="src/main.js" defer></script>
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -52,6 +53,9 @@
           <li><a class="header__menu__item" href="#contact">Contact</a></li>
         </ul>
       </nav>
+      <button class="header__toggle">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
     <!-- MAIN -->
     <main>
@@ -342,7 +346,7 @@
         </div>
       </section>
       <!-- Testimonials -->
-      <section id="testimonials" class="section max-container">
+      <section id="testimonial" class="section max-container">
         <h2 class="title">Testimonials</h2>
         <p class="description">See what they say about me</p>
         <ul class="testimonials">
