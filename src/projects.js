@@ -10,13 +10,17 @@ category.addEventListener('click', (event) => {
   if (keyword == null) {
     return;
   }
+  handleActiveCategory(event.target);
+  filterProjects(keyword);
+});
 
-  // btn bg color change
+function handleActiveCategory(target) {
   const active = document.querySelector('.category--selected');
   active.classList.remove('category--selected');
-  event.target.classList.add('category--selected');
+  target.classList.add('category--selected');
+}
 
-  // filtering projects by keyword
+function filterProjects(keyword) {
   projectContainer.classList.add('anim-out');
   projects.forEach((project) => {
     if (keyword == 'all' || keyword == project.dataset.type) {
@@ -28,4 +32,4 @@ category.addEventListener('click', (event) => {
   setTimeout(() => {
     projectContainer.classList.remove('anim-out');
   }, 400);
-});
+}
