@@ -7,14 +7,7 @@
  *  마지막 contact 섹션이 보여진다면, 가장 마지막 섹션을 선택
  */
 
-const sectionIds = [
-  '#home',
-  '#about',
-  '#skills',
-  '#work',
-  '#testimonial',
-  '#contact',
-];
+const sectionIds = ['#home', '#skills', '#work', '#contact'];
 const sections = sectionIds.map((id) => document.querySelector(id));
 const navItems = sectionIds.map((id) =>
   document.querySelector(`[href="${id}"]`)
