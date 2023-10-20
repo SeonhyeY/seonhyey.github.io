@@ -292,7 +292,7 @@ button:focus {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: calc(137% + 1.3px);
+  width: calc(100% + 1.3px);
   height: 52px;
   overflow: hidden;
   line-height: 0;
@@ -593,6 +593,17 @@ button:focus {
   /* Skills */
   .skills {
     grid-template-columns: 1fr;
+  }
+
+  .skills__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .skill {
+    width: 100px;
   }
 
   .skills__tools,
